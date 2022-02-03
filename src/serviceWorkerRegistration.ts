@@ -139,13 +139,17 @@ export function register() {
       return;
     }
 
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+    const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
 
-      navigator.serviceWorker.ready.then(() => {
-        console.log(
-          "This web app is being served cache-first by a service " +
-            "worker. To learn more, visit https://cra.link/PWA"
-        );
-      });
+    navigator.serviceWorker.ready.then(() => {
+      navigator.serviceWorker
+        .register(swUrl)
+        .then((result: any) => {
+          console.log(result);
+        })
+        .catch((e: any) => {
+          console.log("error");
+        });
+    });
   }
 }
