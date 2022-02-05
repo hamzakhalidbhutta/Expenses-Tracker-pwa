@@ -2,7 +2,7 @@
 
 ## Commands
 
-### 1- Package & command used to create this app:
+### 1- Package used to create this app:
     - npx create-react-app my-app --template pwa-typescript
 ### 2- Install React Router v6
     - npm install react-router@next react-router-dom@next
