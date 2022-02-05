@@ -135,9 +135,9 @@
 export function register() {
   if ("serviceWorker" in navigator) {
     const publicUrl = new URL(process.env.PUBLIC_URL, window.location.href);
-    if (publicUrl.origin !== window.location.origin) {
-      return;
-    }
+    // if (publicUrl.origin !== window.location.origin) {
+    //   return;
+    // }
 
     const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
 
