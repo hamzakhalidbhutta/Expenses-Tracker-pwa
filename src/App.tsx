@@ -1,8 +1,11 @@
+import React from "react";
+import Home from "./Pages/Home";
 
-function App() {
+function App(props : any) :any
+{
   return (
     <div className="App">
-     
+      <Home />
     </div>
   );
 }
