@@ -1,0 +1,25 @@
+.enterTransections {
+  font-size: 2rem;
+  width: 100%;
+  p {
+    margin: 1rem;
+  }
+  .enterTransectionForm {
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: auto;
+    input{
+        height: 2rem;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+    button{
+        font-size: 1.6rem;
+        width: 10rem;
+        padding: 1rem;
+    }
+  }
+}

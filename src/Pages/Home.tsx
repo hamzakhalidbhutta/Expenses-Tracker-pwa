@@ -1,10 +1,16 @@
 import React from "react";
-import Display from "../Components/Display";
+import Header from "../Components/Header";
+import Amount from "../Components/Amount";
+import Transections from "../Components/Transections";
+import EnterTransections from "../Components/EnterTransections";
 
 const Home = () => {
   return (
-    <div>
-      <Display />
+    <div className="home">
+      <Header />
+      <Amount />
+      <Transections />
+      <EnterTransections />
     </div>
   );
 };

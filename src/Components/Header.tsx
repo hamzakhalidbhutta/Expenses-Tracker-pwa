@@ -1,11 +1,11 @@
 import React from "react";
 
-const Display = () => {
+const Header = () => {
   return (
-    <div>
+    <header>
       <h1>Expense Traker PWA</h1>
-    </div>
+    </header>
   );
 };
 
-export default Display;
+export default Header;

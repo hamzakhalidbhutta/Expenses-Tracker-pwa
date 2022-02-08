@@ -1,0 +1,21 @@
+.card {
+    box-shadow: 0.1rem 0.1rem 2rem gray;
+    margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title,
+  .c_amount {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 3rem;
+    margin: 1rem;
+  }
+  .title {
+    justify-content: flex-start;
+  }
+  .c_amount {
+    justify-content: flex-end;
+  }
+}
