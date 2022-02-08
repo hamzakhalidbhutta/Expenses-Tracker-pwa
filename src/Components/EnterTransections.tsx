@@ -23,7 +23,8 @@ const EnterTransections = () => {
       >
         <input type="text" placeholder="Title" name="t_title" id="t_title" />
         <input type="text" placeholder="Amount" name="t_amount" id="t_amount" />
-        <select name="t_type" id="t_type">
+        <select name="t_type" id="t_type" >
+        <option >-- Select Transection Type --</option>
           <option value="withdraw">Withdraw</option>
           <option value="deposit">Deposit</option>
         </select>
