@@ -5,8 +5,8 @@ const EnterTransections = () => {
     const titleField: any = document.getElementById("t_title");
 
     const amountField: any = document.getElementById("t_amount");
-
-    console.log(`${titleField.value} , ${amountField.value}`);
+    const typeField: any = document.getElementById("t_type");
+    console.log(`${titleField.value} , ${amountField.value}, ${typeField.value}`);
   }
   return (
     <div className="enterTransections">
@@ -23,6 +23,10 @@ const EnterTransections = () => {
       >
         <input type="text" placeholder="Title" name="t_title" id="t_title" />
         <input type="text" placeholder="Amount" name="t_amount" id="t_amount" />
+        <select name="t_type" id="t_type">
+          <option value="withdraw">Withdraw</option>
+          <option value="deposit">Deposit</option>
+        </select>
         <button>Submit</button>
       </form>
     </div>
