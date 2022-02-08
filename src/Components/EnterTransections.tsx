@@ -3,7 +3,10 @@ import React from "react";
 const EnterTransections = () => {
   function enterTrans(e: any) {
     const titleField: any = document.getElementById("t_title");
-    console.log(titleField);
+
+    const amountField: any = document.getElementById("t_amount");
+
+    console.log(`${titleField.value} , ${amountField.value}`);
   }
   return (
     <div className="enterTransections">
@@ -19,6 +22,7 @@ const EnterTransections = () => {
         className="enterTransectionForm"
       >
         <input type="text" placeholder="Title" name="t_title" id="t_title" />
+        <input type="text" placeholder="Amount" name="t_amount" id="t_amount" />
         <button>Submit</button>
       </form>
     </div>
