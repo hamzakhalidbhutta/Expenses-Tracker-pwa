@@ -5,7 +5,7 @@ export const ServiceWorker = () => {
     "https://expensetracker-pwa-hkbenvision.netlify.app/manifest.json",
     "https://expensetracker-pwa-hkbenvision.netlify.app/static/css/main.03726f18.css",
     "https://expensetracker-pwa-hkbenvision.netlify.app/static/js/main.94ced5bc.js",
-    
+    "https://expensetracker-pwa-hkbenvision.netlify.app/",
     "/favicon.ico",
     "index.html",
     "/",
