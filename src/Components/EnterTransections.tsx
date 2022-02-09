@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { TransectionsContext } from "./../store/Context/transectionContext";
 
 const EnterTransections = () => {
-  function enterTrans(e: any) {
-    const titleField: any = document.getElementById("t_title");
+  const context: any = useContext(TransectionsContext);
+  const [title, setTitle] = useState("");
+  const [amount, setAmount] = useState("");
+  const [type, setType] = useState("");
 
+  function validate(e: any) {
+    const titleField: any = document.getElementById("t_title");
     const amountField: any = document.getElementById("t_amount");
     const typeField: any = document.getElementById("t_type");
 
@@ -13,15 +18,17 @@ const EnterTransections = () => {
     } else if (amountField.value.trim().length < 1) {
       console.log(`Amount should be greater than 0 `);
       return;
-    } else if (typeField.value < 2) {
+    } else if (typeField.value.length < 2) {
       console.log(`Please select transection type `);
       return;
     } else {
-      console.log(
-        `${titleField.value} , ${amountField.value}, ${typeField.value}`
-      );
+      context.addTransection({ title, amount });
+      setTitle("");
+      setAmount("");
+      setType("");
     }
   }
+
   return (
     <div className="enterTransections">
       <p>
@@ -30,13 +37,39 @@ const EnterTransections = () => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          enterTrans(e);
+          validate(e);
+          // addTransec(e);
         }}
         className="enterTransectionForm"
       >
-        <input type="text" placeholder="Title" name="t_title" id="t_title" />
-        <input type="text" placeholder="Amount" name="t_amount" id="t_amount" />
-        <select name="t_type" id="t_type">
+        <input
+          type="text"
+          placeholder="Title"
+          value={title}
+          onChange={(e) => {
+            setTitle(e.target.value);
+          }}
+          name="t_title"
+          id="t_title"
+        />
+        <input
+          type="text"
+          placeholder="Amount"
+          value={amount}
+          onChange={(e) => {
+            setAmount(e.target.value);
+          }}
+          name="t_amount"
+          id="t_amount"
+        />
+        <select
+          name="t_type"
+          id="t_type"
+          value={type}
+          onChange={(e) => {
+            setType(e.target.value);
+          }}
+        >
           <option value="">--Select Transection Type--</option>
           <option value="withdraw">Withdraw</option>
           <option value="deposit">Deposit</option>
