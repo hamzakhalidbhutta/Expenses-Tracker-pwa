@@ -5,7 +5,7 @@ import App from "./App";
 import Home from "./Pages/Home";
 import NotFound from "./Pages/NotFound";
 import { TransectionsProvider } from "./store/Provider/transectionProvider";
-// import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 ReactDOM.render(
   <Router>
     <TransectionsProvider>
@@ -20,4 +20,4 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
-// serviceWorkerRegistration.register();
+serviceWorkerRegistration.register();
