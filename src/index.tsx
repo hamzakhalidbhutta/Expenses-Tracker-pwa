@@ -6,7 +6,7 @@ import Home from "./Pages/Home";
 import NotFound from "./Pages/NotFound";
 import { TransectionsProvider } from "./store/Provider/transectionProvider";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
-import { ServiceWorker } from "../public/service-worker";
+
 ReactDOM.render(
   <Router>
     <TransectionsProvider>
