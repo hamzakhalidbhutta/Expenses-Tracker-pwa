@@ -1,7 +1,15 @@
-header{
-   text-align: center;
-  
-    h1{
-        font-size: 4rem;
+header {
+    margin: 3rem 0;
+  text-align: center;
+  h1 {
+    font-size: 4rem;
+  }
+}
+@media (max-width: 750px) {
+  header {
+    text-align: center;
+    h1 {
+      font-size: 3rem;
     }
+  }
 }
