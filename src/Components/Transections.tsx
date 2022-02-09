@@ -14,7 +14,12 @@ const Transections = (): JSX.Element => {
 
   return (
     <div className="transections">
-      {context.transections.map((v: any, i: any) => {
+      {
+      (context.transections.length <= 0)?
+      <h3>No Transion History Found!!!</h3>
+      :
+      
+      context.transections.map((v: any, i: any) => {
         return (
           <Card
             key={i}
