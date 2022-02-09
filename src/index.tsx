@@ -6,13 +6,14 @@ import Home from "./Pages/Home";
 import NotFound from "./Pages/NotFound";
 import { TransectionsProvider } from "./store/Provider/transectionProvider";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
+import { ServiceWorker } from "../public/service-worker";
 ReactDOM.render(
   <Router>
     <TransectionsProvider>
       <App>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </App>
     </TransectionsProvider>
