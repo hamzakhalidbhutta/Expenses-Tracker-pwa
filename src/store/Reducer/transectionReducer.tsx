@@ -1,9 +1,5 @@
-enum TRANSECTION_ACTION{
-ADD = "ADD",
-DELETE = "DELETE",
-UPDATE = "UPDATE",
-TOTAL_INCOME = "TOTAL_INCOME"
-}
+import { TRANSECTION_ACTION } from "../types";
+
 export const TransectionsReducer = (state : any, action : any) =>  {
     let totalBalance : number = 0;
       switch (action.type) {
@@ -12,9 +8,9 @@ export const TransectionsReducer = (state : any, action : any) =>  {
         case TRANSECTION_ACTION.DELETE:
           return state.filter((v :any, i :any) => i !== action.payload.transID);
         case TRANSECTION_ACTION.UPDATE:
-          return;
+          return  [...state]; 
         case TRANSECTION_ACTION.TOTAL_INCOME:
-          totalBalance = 20;
+          totalBalance = 0;
           return totalBalance;
         default:
           return state;

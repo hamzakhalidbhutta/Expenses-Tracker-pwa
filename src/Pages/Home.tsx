@@ -1,14 +1,14 @@
 import React from "react";
 import Header from "../Components/Header";
-import Amount from "../Components/Amount";
 import Transections from "../Components/Transections";
 import EnterTransections from "../Components/EnterTransections";
+import Balance from "../Components/Balance";
 
-const Home = () => {
+const Home = (): JSX.Element => {
   return (
     <div className="home">
       <Header />
-      <Amount />
+      <Balance />
       <Transections />
       <EnterTransections />
     </div>
