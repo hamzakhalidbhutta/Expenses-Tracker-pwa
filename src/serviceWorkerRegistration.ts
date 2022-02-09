@@ -5,7 +5,7 @@ export const register = () => {
       return;
     }
 
-    const swUrl: string = `${process.env.PUBLIC_URL}/service-worker.ts`;
+    const swUrl: string = `${process.env.PUBLIC_URL}/service-worker.mts`;
 
     navigator.serviceWorker
       .register(swUrl)
