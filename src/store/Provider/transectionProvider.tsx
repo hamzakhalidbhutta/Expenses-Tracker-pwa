@@ -1,24 +1,32 @@
 import { useReducer } from "react";
 import { TransectionsContext } from "../Context/transectionContext";
 import { TransectionsReducer } from "../Reducer/transectionReducer";
-import { TRANSECTIONTYPE, TRANSECTION_ACTION } from "../types";
+import {
+  TRANSECTION,
+  TRANSECTION_ACTION,
+  TRANSECTION_TYPE,
+} from "../types";
 
-const initialTransections: TRANSECTIONTYPE[] = [
+const initialTransections: TRANSECTION[] = [
   {
     title: "Income1",
     amount: 100,
+    type : TRANSECTION_TYPE.RECEIVED
   },
   {
     title: "Income2",
     amount: 200,
+    type : TRANSECTION_TYPE.RECEIVED
   },
   {
     title: "Income3",
     amount: 300,
+    type : TRANSECTION_TYPE.RECEIVED
   },
   {
     title: "Bill",
-    amount: -100,
+    amount: 100,
+    type : TRANSECTION_TYPE.PAYED
   },
 ];
 
@@ -28,28 +36,29 @@ export const TransectionsProvider = ({ children }: any): JSX.Element => {
     initialTransections
   );
 
-  const addTransection = (data: TRANSECTIONTYPE) => {
+  const addTransection = (data: TRANSECTION) => {  
     dispatch({
       type: TRANSECTION_ACTION.ADD,
       payload: {
         title: data.title,
-        amount: data.amount,
+        amount : data.amount,
+        type: data.type
       },
     });
   };
 
-  const updateTransection = (data: TRANSECTIONTYPE) => {
+  const updateTransection = (data: TRANSECTION) => {
     dispatch({
       type: TRANSECTION_ACTION.UPDATE,
       payload: {
         title: data.title,
         amount: data.amount,
+    
       },
     });
   };
 
   const delTransection = (transID: number) => {
-    
     dispatch({
       type: TRANSECTION_ACTION.DELETE,
       payload: {

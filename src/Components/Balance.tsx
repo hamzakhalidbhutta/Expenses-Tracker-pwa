@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { TransectionsContext } from "../store/Context/transectionContext";
+import { TRANSECTION_TYPE } from "../store/types";
 
 const Balance = (): JSX.Element => {
   const context: any = useContext(TransectionsContext);
@@ -7,7 +8,11 @@ const Balance = (): JSX.Element => {
   const getBalance = (total: any) => {
     let totaltransection = 0;
     total.map((v: any) => {
-      totaltransection = Number(v.amount) + totaltransection;
+      if (v.type === TRANSECTION_TYPE.RECEIVED) {
+        totaltransection = Number(v.amount) + totaltransection;
+      } else if (v.type === TRANSECTION_TYPE.PAYED) {
+        totaltransection = totaltransection - Number(v.amount);
+      }
     });
     return totaltransection;
   };

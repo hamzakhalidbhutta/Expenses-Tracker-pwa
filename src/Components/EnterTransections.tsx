@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { TRANSECTION_TYPE } from "../store/types";
 import { TransectionsContext } from "./../store/Context/transectionContext";
 
 const EnterTransections = () => {
@@ -22,7 +23,7 @@ const EnterTransections = () => {
       console.log(`Please select transection type `);
       return;
     } else {
-      context.addTransection({ title, amount });
+      context.addTransection({ title, amount, type });
       setTitle("");
       setAmount("");
       setType("");
@@ -38,7 +39,6 @@ const EnterTransections = () => {
         onSubmit={(e) => {
           e.preventDefault();
           validate(e);
-          // addTransec(e);
         }}
         className="enterTransectionForm"
       >
@@ -71,8 +71,8 @@ const EnterTransections = () => {
           }}
         >
           <option value="">--Select Transection Type--</option>
-          <option value="withdraw">Withdraw</option>
-          <option value="deposit">Deposit</option>
+          <option value={TRANSECTION_TYPE.RECEIVED}>{TRANSECTION_TYPE.RECEIVED}</option>
+          <option value={TRANSECTION_TYPE.PAYED}>{TRANSECTION_TYPE.PAYED}</option>
         </select>
         <button>Submit</button>
       </form>
