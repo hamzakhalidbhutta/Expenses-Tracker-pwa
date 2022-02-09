@@ -6,15 +6,26 @@ const EnterTransections = () => {
 
     const amountField: any = document.getElementById("t_amount");
     const typeField: any = document.getElementById("t_type");
-    console.log(
-      `${titleField.value} , ${amountField.value}, ${typeField.value}`
-    );
+
+    if (titleField.value.trim().length < 2) {
+      console.log(`Title should be greater than 2 characters or more`);
+      return;
+    } else if (amountField.value.trim().length < 1) {
+      console.log(`Amount should be greater than 0 `);
+      return;
+    } else if (typeField.value < 2) {
+      console.log(`Please select transection type `);
+      return;
+    } else {
+      console.log(
+        `${titleField.value} , ${amountField.value}, ${typeField.value}`
+      );
+    }
   }
   return (
     <div className="enterTransections">
       <p>
-        Enter amount with negative sign if you want to withdraw amount and
-        without any sign if you want to deposit amount.
+        <b>Enter withdraw or deposit transections here.</b>
       </p>{" "}
       <form
         onSubmit={(e) => {
