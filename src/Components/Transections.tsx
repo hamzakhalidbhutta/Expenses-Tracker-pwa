@@ -1,11 +1,10 @@
-import React, { useContext, useState } from "react";
+import { useContext } from "react";
 import { TransectionsContext } from "../store/Context/transectionContext";
 import Card from "./Card";
 
-const Transections = () => {
+const Transections = (): JSX.Element => {
   const context: any = useContext(TransectionsContext);
   const delTransection = (dt: any) => {
-    
     context.delTransection(dt);
   };
 

@@ -1,9 +1,5 @@
-import React, { createContext} from "react";
+import { createContext } from "react";
 
-
-
-export const TransectionsContext: any = createContext([{ title: "Income", amount: 100}]);
-
-
-
-
+export const TransectionsContext: any = createContext([
+  { title: "Income", amount: 100 },
+]);

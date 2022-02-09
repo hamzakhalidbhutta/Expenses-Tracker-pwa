@@ -1,6 +1,4 @@
-import React from "react";
-
-const Header = () => {
+const Header = () : JSX.Element => {
   return (
     <header>
       <h1>Expense Traker PWA</h1>

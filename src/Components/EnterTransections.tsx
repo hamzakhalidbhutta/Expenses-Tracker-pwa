@@ -1,8 +1,8 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import { TRANSECTION_TYPE } from "../store/types";
 import { TransectionsContext } from "./../store/Context/transectionContext";
 
-const EnterTransections = () => {
+const EnterTransections = () : JSX.Element => {
   const context: any = useContext(TransectionsContext);
   const [title, setTitle] = useState("");
   const [amount, setAmount] = useState("");
@@ -71,8 +71,12 @@ const EnterTransections = () => {
           }}
         >
           <option value="">--Select Transection Type--</option>
-          <option value={TRANSECTION_TYPE.RECEIVED}>{TRANSECTION_TYPE.RECEIVED}</option>
-          <option value={TRANSECTION_TYPE.PAYED}>{TRANSECTION_TYPE.PAYED}</option>
+          <option value={TRANSECTION_TYPE.RECEIVED}>
+            {TRANSECTION_TYPE.RECEIVED}
+          </option>
+          <option value={TRANSECTION_TYPE.PAYED}>
+            {TRANSECTION_TYPE.PAYED}
+          </option>
         </select>
         <button>Submit</button>
       </form>

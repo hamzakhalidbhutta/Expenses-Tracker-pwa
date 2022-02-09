@@ -1,32 +1,28 @@
 import { useReducer } from "react";
 import { TransectionsContext } from "../Context/transectionContext";
 import { TransectionsReducer } from "../Reducer/transectionReducer";
-import {
-  TRANSECTION,
-  TRANSECTION_ACTION,
-  TRANSECTION_TYPE,
-} from "../types";
+import { TRANSECTION, TRANSECTION_ACTION, TRANSECTION_TYPE } from "../types";
 
 const initialTransections: TRANSECTION[] = [
   {
     title: "Income1",
     amount: 100,
-    type : TRANSECTION_TYPE.RECEIVED
+    type: TRANSECTION_TYPE.RECEIVED,
   },
   {
     title: "Income2",
     amount: 200,
-    type : TRANSECTION_TYPE.RECEIVED
+    type: TRANSECTION_TYPE.RECEIVED,
   },
   {
     title: "Income3",
     amount: 300,
-    type : TRANSECTION_TYPE.RECEIVED
+    type: TRANSECTION_TYPE.RECEIVED,
   },
   {
     title: "Bill",
     amount: 100,
-    type : TRANSECTION_TYPE.PAYED
+    type: TRANSECTION_TYPE.PAYED,
   },
 ];
 
@@ -36,13 +32,13 @@ export const TransectionsProvider = ({ children }: any): JSX.Element => {
     initialTransections
   );
 
-  const addTransection = (data: TRANSECTION) => {  
+  const addTransection = (data: TRANSECTION) => {
     dispatch({
       type: TRANSECTION_ACTION.ADD,
       payload: {
         title: data.title,
-        amount : data.amount,
-        type: data.type
+        amount: data.amount,
+        type: data.type,
       },
     });
   };
@@ -53,7 +49,6 @@ export const TransectionsProvider = ({ children }: any): JSX.Element => {
       payload: {
         title: data.title,
         amount: data.amount,
-    
       },
     });
   };

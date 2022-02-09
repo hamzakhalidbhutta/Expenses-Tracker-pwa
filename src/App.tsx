@@ -1,12 +1,5 @@
-import React from "react";
-
-function App(props : any) :any
-{
-  return (
-    <div className="app">
-      {props.children}
-    </div>
-  );
+function App(props: any): any {
+  return <div className="app">{props.children}</div>;
 }
 
 export default App;
