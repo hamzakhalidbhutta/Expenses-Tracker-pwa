@@ -13,7 +13,7 @@ const Card = (props: any): JSX.Element => {
           >
             X
           </button>
-          <button
+          {/* <button
             className="spanUpdate"
             onClick={(e) => {
               e.preventDefault();
@@ -21,7 +21,7 @@ const Card = (props: any): JSX.Element => {
             }}
           >
             !
-          </button>
+          </button> */}
         </div>
         <div className="title">{props.title}</div>
         <div className="c_amount">{props.amount}$</div>
