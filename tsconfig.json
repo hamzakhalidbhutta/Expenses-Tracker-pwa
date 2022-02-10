@@ -22,5 +22,5 @@
   },
   "include": [
     "src"
-, "public/service-worker.mts"  ]
+, "public/service-worker.js"  ]
 }
