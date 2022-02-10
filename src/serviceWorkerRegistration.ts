@@ -10,7 +10,7 @@ export const register = () => {
     navigator.serviceWorker
       .register(swUrl)
       .then((registration: any) => {
-        console.log(registration);
+        // console.log(registration);
       })
       .catch((e: any) => {
         console.log("error", e);
